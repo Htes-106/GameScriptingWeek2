@@ -1,0 +1,30 @@
+https://replit.com/join/mbsseejskr-sethpeters106
+-- Seth Peters
+
+local answer = math.random(1, 100)
+-- Chooses the answer number from 1 to 100
+
+repeat
+  print ("Guess a number between 1 and 100")
+  local guess = io.read()
+  -- Asks the user to guess a number and reads the input
+  local function more()
+    print ("the number is higher")
+  end
+-- if the guess is higher than the answer, it prints "the number is higher"
+  local function less()
+    print ("the number is lower")
+  end
+-- if the guess is lower than the answer, it prints "the number is lower"
+  if guess > answer then
+    less()
+-- allows the program to determine when to print "the number is lower"
+  if guess < answer then
+      more()
+  end
+-- allows the program to determine when to print "the number is higher"
+until
+  guess == answer
+  print ("you got it!")
+  print ("it took you " .. attempts ..)
+-- once the guess is correct, it prints "you got it!" and the number of attempts
